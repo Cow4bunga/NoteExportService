@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class NoteUpdateService {
   private final ExportService exportService;
 
-  @Scheduled(cron = "0 * * * * *")
+  @Scheduled(cron = "0 15 0/2 * * ?")
   public void exportNotes() {
     exportService.updateClients();
     exportService.updateClientNotes();
